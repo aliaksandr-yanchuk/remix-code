@@ -1,7 +1,9 @@
 import {
   Form,
+  Link,
   Links,
   Meta,
+  Outlet,
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
@@ -24,32 +26,33 @@ export default function App() {
       </head>
       <body>
         <div id="sidebar">
-          <h1>Remix Contacts</h1>
+          <h1>Remix Code</h1>
           <div>
-            <Form id="search-form" role="search">
+            <Form id="id-form" role="search">
               <input
                 id="q"
-                aria-label="Search contacts"
-                placeholder="Search"
+                aria-label="Decode ID"
+                placeholder="ID"
                 type="search"
                 name="q"
               />
               <div id="search-spinner" aria-hidden hidden={true} />
             </Form>
             <Form method="post">
-              <button type="submit">New</button>
+              <button type="submit">Load</button>
             </Form>
           </div>
           <nav>
             <ul>
               <li>
-                <a href={`/contacts/1`}>Your Name</a>
-              </li>
-              <li>
-                <a href={`/contacts/2`}>Your Friend</a>
+                <Link to={`/`}>Root</Link>
               </li>
             </ul>
           </nav>
+        </div>
+
+        <div id="detail">
+          <Outlet />
         </div>
 
         <ScrollRestoration />
