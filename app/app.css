@@ -256,10 +256,13 @@ i {
 }
 
 #detail {
+  display: flex;
   flex: 1;
   padding: 2rem 4rem;
   width: 100%;
   overflow: auto;
+  flex-direction: column;
+  gap: 8px;
 }
 
 #detail.loading {
@@ -294,4 +297,16 @@ i {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+.alert {
+  border: 1px solid red;
+  outline-color: red;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  border: 1px dashed black;
+  padding: 4px;
 }
