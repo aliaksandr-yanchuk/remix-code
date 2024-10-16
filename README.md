@@ -4,6 +4,14 @@ Remixを用いてSSRのIDで取得しているJWTのトークンをデコード�
 Remixは基本的にSSRのアプローチの建築になっています。課題解決するための考えた建築ポイントとしてはサーバーサイドででコードを行ってすぐレンダリングできるようにする仕組みです。そしてRemixのnesting routesに従ってページのレイアウトが分けられます。
 発動するには下記の通りにしてください。
 
+## Initial
+
+First install dependencies:
+
+```sh
+npm install
+```
+
 ## Development
 
 From your terminal:
