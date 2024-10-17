@@ -39,7 +39,7 @@ export default function IdRoute() {
   const info: DecodedInfo = useLoaderData<typeof loader>();
 
   const formatDate = (date: string | undefined) => {
-    return date ? new Intl.DateTimeFormat('ja-JP', {
+    return date ? new Intl.DateTimeFormat("ja-JP", {
       timeStyle: "medium",
       dateStyle: "short",
     }).format(new Date(date)) : "";
